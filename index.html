@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakib Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Home Section -->
+<header id="home">
+    <h1>Hi, I'm Sakib!</h1>
+    <p>Aspiring Data Analyst | SQL, Python, Excel, Power BI</p>
+</header>
+
+<!-- Projects Section -->
+<section id="projects" class="fade-in">
+    <h2>My Projects</h2>
+    <div class="project">
+        <h3>Netflix SQL Portfolio</h3>
+        <p>Analyzed Netflix dataset using SQL, Pandas & Excel</p>
+    </div>
+    <div class="project">
+        <h3>Power BI Dashboard</h3>
+        <p>Interactive sales dashboard using Power BI</p>
+    </div>
+</section>
+
+<!-- Skills Section -->
+<section id="skills" class="fade-in">
+    <h2>Skills</h2>
+    <ul>
+        <li>SQL (Intermediate-Advanced)</li>
+        <li>Python (NumPy, Pandas)</li>
+        <li>Excel & Pivot Tables</li>
+        <li>Power BI / Tableau</li>
+    </ul>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <p>Email: empiregamerz90@gmail.com</p>
+    <p>LinkedIn: <a href="www.linkedin.com/in/
+mohammad-sakib-miya-a1487534a
+
+">Click here: </a></p>
+    <p>GitHub: <a href="https://github.com/Sakib-miya">Click here:</a></p>
+</section>
+
+<script>
+    // Fade-in animation on scroll
+    const faders = document.querySelectorAll('.fade-in');
+    const appearOptions = { threshold: 0.2, rootMargin: "0px 0px -50px 0px" };
+    const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll){
+        entries.forEach(entry => {
+            if(!entry.isIntersecting) return;
+            entry.target.classList.add('appear');
+            appearOnScroll.unobserve(entry.target);
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+</script>
+
+</body>
+</html>
